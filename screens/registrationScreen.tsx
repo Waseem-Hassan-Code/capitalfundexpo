@@ -5,7 +5,7 @@ import Screen from "../components/Screen";
 import registrationValidation from "../yupValidations/rigistrationScreen";
 import InputField from "../components/inputField";
 import AppButton from "../components/AppButton";
-import Dropdown from "../components/DropDown"; // Import the Dropdown component
+import Dropdown from "../components/DropDown";
 import COLORS from "../components/Utilities/colors";
 
 export default function RegistrationScreen() {
@@ -17,7 +17,7 @@ export default function RegistrationScreen() {
 
   return (
     <Screen style={styles.screen}>
-      <Image style={styles.logo} source={require("../assets/logo.jpeg")} />
+      <Image style={styles.logo} source={require("../assets/Logo.png")} />
       <Formik
         initialValues={{
           name: "",
@@ -73,7 +73,6 @@ export default function RegistrationScreen() {
               error={touched.password && errors.password}
             />
 
-            {/* Use the Dropdown component for gender */}
             <View style={styles.dropdownContainer}>
               <Dropdown
                 selectedValue={values.gender}

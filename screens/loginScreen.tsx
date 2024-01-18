@@ -1,4 +1,4 @@
-import { StyleSheet, Image, View, Text } from "react-native";
+import { StyleSheet, Image, View, Text, TouchableOpacity } from "react-native";
 import React from "react";
 import Screen from "../components/Screen";
 import InputField from "../components/inputField";
@@ -6,12 +6,12 @@ import AppButton from "../components/AppButton";
 import COLORS from "../components/Utilities/colors";
 import { Formik } from "formik";
 import loginValidation from "../yupValidations/loginScreen";
+import ActivityIndicator from "../components/ActivityIndicator";
 
-export default function LoginScreen() {
+export default function LoginScreen({ navigation }) {
   return (
     <Screen style={styles.screen}>
-      <Image style={styles.logo} source={require("../assets/logo.jpeg")} />
-
+      <Image style={styles.logo} source={require("../assets/Logo.png")} />
       <Formik
         initialValues={{
           email: "",
@@ -53,6 +53,25 @@ export default function LoginScreen() {
               title="Login"
               onPress={handleSubmit}
             />
+
+            <TouchableOpacity
+              style={{ marginTop: 10, alignItems: "center" }}
+              onPress={() => {
+                navigation.navigate("SignUp");
+              }}
+            >
+              <Text style={{ color: "#1a2c32", fontSize: 17 }}>
+                Don't have an account?{"  "}
+                <Text
+                  style={{
+                    color: "#39938f",
+                    fontWeight: "700",
+                  }}
+                >
+                  Click here
+                </Text>
+              </Text>
+            </TouchableOpacity>
           </>
         )}
       </Formik>

@@ -1,11 +1,12 @@
 import React from "react";
 import { View } from "react-native";
-import RegistrationScreen from "./screens/registrationScreen";
+import { StackNavigator } from "./NavigationStack";
+import { NavigationContainer } from "@react-navigation/native";
 
 export default function App() {
   return (
-    <View>
-      <RegistrationScreen />
-    </View>
+    <NavigationContainer>
+      <StackNavigator />
+    </NavigationContainer>
   );
 }

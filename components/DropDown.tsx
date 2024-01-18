@@ -51,6 +51,7 @@ const pickerSelectStyles = StyleSheet.create({
     borderRadius: 4,
     color: "black",
     paddingRight: 30,
+    backgroundColor: COLORS.CONTAINER,
   },
   inputAndroid: {
     fontSize: 16,
@@ -61,6 +62,7 @@ const pickerSelectStyles = StyleSheet.create({
     borderRadius: 8,
     color: "black",
     paddingRight: 30,
+    backgroundColor: COLORS.CONTAINER,
   },
 });
 
